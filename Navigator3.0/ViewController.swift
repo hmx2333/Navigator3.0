@@ -108,6 +108,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         didPressTakeAnother()
     }
     
+//    func imageFilter() {
+//        let imageFilter = GPUImageCannyEdgeDetectionFilter()
+//        
+//    }
+    
     
     
     
