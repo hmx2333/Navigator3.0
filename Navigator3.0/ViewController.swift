@@ -17,6 +17,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var captureSession = AVCaptureSession()
     var stillImageOutput = AVCaptureStillImageOutput()
     var previewLayer = AVCaptureVideoPreviewLayer()
+    var ifProcessImage = true
+    var importantImage: UIImage!
+    var data: NSData!
     
     
     override func viewDidLoad() {
@@ -69,7 +72,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             videoConnection.videoOrientation = AVCaptureVideoOrientation.Portrait
             stillImageOutput.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: {
                 (SampleBuffer, error) in
-                if SampleBuffer != nil {
+                if (SampleBuffer != nil) && (!self.ifProcessImage) {
                     
                     var imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(SampleBuffer)
                     var dataProvider = CGDataProviderCreateWithCFData(imageData)
@@ -81,6 +84,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     
                     self.tempImageView.image = image
                     self.tempImageView.hidden = false
+                    
+                } else {
+                    var imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(SampleBuffer)
+                    var dataProvider = CGDataProviderCreateWithCFData(imageData)
+                    var kCGRenderingIntentDefault = CGColorRenderingIntent.RenderingIntentDefault
+                    var cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider, nil, true, kCGRenderingIntentDefault)
+                    
+                    var image = UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.Right)
+                    let imageFilter = CannyEdgeDetection()
+                    var Processedimage = image.filterWithOperation(imageFilter)
+                    
+                    self.importantImage = Processedimage
+                    self.tempImageView.image = self.importantImage
+                    self.tempImageView.hidden = false
+                    self.data = UIImageJPEGRepresentation(Processedimage, 1.0)
                     
                 }
             })
@@ -107,15 +125,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         didPressTakeAnother()
     }
-    
-//    func imageFilter() {
-//        let imageFilter = GPUImageCannyEdgeDetectionFilter()
-//        
-//    }
-    
-    
-    
-    
+ 
 }
 
 
