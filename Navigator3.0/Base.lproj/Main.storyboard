@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Navigator3_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H7K-zN-DuC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JvJ-bb-geU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JvJ-bb-geU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3tC-b0-Xa0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H7K-zN-DuC" secondAttribute="trailing" constant="-20" id="79p-bD-doD"/>
+                            <constraint firstItem="JvJ-bb-geU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="Dl1-Ud-TUc"/>
+                            <constraint firstItem="H7K-zN-DuC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="E5l-1T-txQ"/>
+                            <constraint firstItem="JvJ-bb-geU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="NU8-oG-K77"/>
+                            <constraint firstItem="H7K-zN-DuC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="NfC-Lv-ZSg"/>
+                            <constraint firstItem="JvJ-bb-geU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cSl-vo-ix4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JvJ-bb-geU" secondAttribute="bottom" id="fDb-an-s1n"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="H7K-zN-DuC" secondAttribute="bottom" id="jLT-Ry-s84"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JvJ-bb-geU" secondAttribute="trailing" constant="-20" id="n6E-ud-VQr"/>
+                            <constraint firstItem="H7K-zN-DuC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vLC-Fi-Nsw"/>
+                            <constraint firstItem="H7K-zN-DuC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xeL-F7-mEJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraImage" destination="H7K-zN-DuC" id="s8i-2P-VIR"/>
+                        <outlet property="tempImageView" destination="JvJ-bb-geU" id="bTL-Bq-MTt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="221" y="339"/>
+        </scene>
+    </scenes>
+</document>
