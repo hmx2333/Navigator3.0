@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B6A341C1CFFDB680069F852 /* imageRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6A341B1CFFDB680069F852 /* imageRotate.swift */; };
 		1B8D3C1B1CE90D1F00CE7C98 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B8D3C161CE90D0600CE7C98 /* GPUImage.framework */; };
 		1B8D3C1C1CE90D2B00CE7C98 /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1B8D3C161CE90D0600CE7C98 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1B9D2AE01CE7B65A00B300C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9D2ADF1CE7B65A00B300C8 /* AppDelegate.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1B6A341B1CFFDB680069F852 /* imageRotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageRotate.swift; sourceTree = "<group>"; };
 		1B8D3C101CE90D0600CE7C98 /* GPUImage-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "GPUImage-iOS.xcodeproj"; path = "../../../Downloads/GPUImage2-master/framework/GPUImage-iOS.xcodeproj"; sourceTree = "<group>"; };
 		1B9D2ADC1CE7B65A00B300C8 /* Navigator3.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigator3.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B9D2ADF1CE7B65A00B300C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				1B9D2AE61CE7B65A00B300C8 /* Assets.xcassets */,
 				1B9D2AE81CE7B65A00B300C8 /* LaunchScreen.storyboard */,
 				1B9D2AEB1CE7B65A00B300C8 /* Info.plist */,
+				1B6A341B1CFFDB680069F852 /* imageRotate.swift */,
 			);
 			path = Navigator3.0;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B6A341C1CFFDB680069F852 /* imageRotate.swift in Sources */,
 				1B9D2AE21CE7B65A00B300C8 /* ViewController.swift in Sources */,
 				1B9D2AE01CE7B65A00B300C8 /* AppDelegate.swift in Sources */,
 			);

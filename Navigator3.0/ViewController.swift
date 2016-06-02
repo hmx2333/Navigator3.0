@@ -91,12 +91,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     var kCGRenderingIntentDefault = CGColorRenderingIntent.RenderingIntentDefault
                     var cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider, nil, true, kCGRenderingIntentDefault)
                     
-                    var image = UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.Right)
+                    var image = UIImage(CGImage: cgImageRef!, scale: 0.5, orientation: UIImageOrientation.Right)
+                    image = image.imageRotateByAngle(90, flip: false)
                     let imageFilter = CannyEdgeDetection()
                     var Processedimage = image.filterWithOperation(imageFilter)
                     
                     self.importantImage = Processedimage
                     self.tempImageView.image = self.importantImage
+//                    self.tempImageView.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_2))
+                    self.tempImageView.contentMode = .ScaleToFill
+                    
                     self.tempImageView.hidden = false
                     self.data = UIImageJPEGRepresentation(Processedimage, 1.0)
                     
